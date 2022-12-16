@@ -15,13 +15,19 @@ python3 gbin.py --h
 The command needs to specify three parameters:
 
 ```
-gbin.py [-h] [-of OF] [-unit UNIT] [-count COUNT]
+gbin.py [-h] [-of OF] [-unit UNIT] [-count COUNT] [-value VALUE]
 ```
 
-If you want to generate a file with a size of 1024 and the file name is test.bin, you can run the following command:
+If you want to generate a file with a size of 1024 and the file name is test.bin (random content), you can run the following command:
 
 ```
 python3 gbin.py -of=test.bin -unit=B -count=1024
+```
+
+If you want to generate a file with a size of 1024 and the file name is test.bin (each byte is fixed as 0xFF), you can run the following command:
+
+```
+python3 gbin.py -of=test.bin -unit=B -count=1024 -value=0xFF
 ```
 
 # License
